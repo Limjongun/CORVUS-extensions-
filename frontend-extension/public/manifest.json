@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "CORVUS AI Reading Workspace",
+  "version": "1.0.0",
+  "description": "Your AI Copilot for reading and understanding anything on the web.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Open CORVUS Side Panel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

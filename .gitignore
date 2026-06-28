@@ -1,0 +1,24 @@
+# Node / Frontend
+node_modules/
+dist/
+build/
+.env.local
+
+# Python / Backend
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.env
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
